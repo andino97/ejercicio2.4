@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="tareavideo2_4.Views.playvideo">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="descripcion" 
+                   FontSize="22" 
+                   HorizontalOptions="Center" />
+
+            <video:VideoPlayer 
+                PlayCompletion="videoPlayer_PlayCompletion"   
+                x:Name="videoPlayer" 
+                BackgroundColor="Gray"
+                HorizontalOptions="Center" 
+                HeightRequest="500" 
+                />
+
+            <Button 
+            Text="Salir" 
+            x:Name="btnExitApp" 
+            Clicked="btnExitApp_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

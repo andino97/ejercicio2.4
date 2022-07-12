@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="tareavideo2_4.Views.grabarvideo">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <video:VideoPlayer 
+            PlayCompletion="videoPlayer_PlayCompletion"   
+            x:Name="videoPlayer" 
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            HeightRequest="300" 
+            />
+
+            <Button 
+            Text="Grabar Video" 
+            x:Name="btnRecordVideo" 
+            Clicked="btnRecordVideo_Clicked" />
+
+            <Entry Placeholder="Descripción del video" 
+               x:Name="txtDescripcion" />
+
+            <Button 
+            Text="Guardar Video" 
+            x:Name="btnSaveVideo" 
+            Clicked="btnSaveVideo_Clicked" />
+
+            <Button 
+            Text="Ver Lista de Videos" 
+            x:Name="btnVideoList" 
+            Clicked="btnVideoList_Clicked" />
+
+            <Button 
+            Text="Salir" 
+            x:Name="btnExitApp" 
+            Clicked="btnExitApp_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

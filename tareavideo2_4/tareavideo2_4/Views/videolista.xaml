@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tareavideo2_4.Views.videolista">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Inicio" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listViewVideos"  HasUnevenRows="True" SeparatorVisibility="None" ItemTapped="listViewVideos_ItemTapped"  ItemSelected="listViewVideos_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItem  Text="Ver Detalles" Invoked="SwipeItem_Invoked" />
+                                </SwipeView.RightItems>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding VideoId}" Grid.Row="0" Grid.Column="0" IsVisible="false"/>
+                                        <Label Text="{Binding VideoDescripcion}" Grid.Row="0" Grid.Column="2" FontSize="18" TextColor="Navy" Margin="0,10,0,0"/>
+                                        <Label Text="{Binding VideoUri}" Grid.Row="0" Grid.Column="1" FontSize="10" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
